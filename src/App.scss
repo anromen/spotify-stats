@@ -33,6 +33,7 @@
   width: 30px;
   float: left;
   margin-right: 10px;
+  border-radius: 10px;
 }
 
 .song {
@@ -44,5 +45,71 @@
 
   .cover {
     width: 50px;
+  }
+}
+
+.vertical {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  h2 {
+    transform: rotate(270deg);
+    transform-origin: bottom left;
+  }
+
+  ol {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    right: 5vw;
+
+    li {
+      align-items: center;
+      display: flex;
+      justify-content: left;
+      list-style: none;
+      height: 20%;
+      margin: 0 20px;
+    }
+  }
+}
+
+.artist {
+  img {
+    width: 75px;
+    height: 75px;
+    border-radius: 100px;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  img {
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+    border-radius: 50vw;
+    opacity: 50%;
+    position: absolute;
+    right: 5vw;
+  }
+}
+
+.float {
+  position: absolute;
+  top: 7vh;
+  left: 23vw;
+
+  h1 {
+    color: rgb(117, 85, 167);
+    font-size: 15rem;
+    line-height: 6rem;
   }
 }

@@ -4,7 +4,9 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
-      <div className="float"></div>
+      <div className="float">
+        <h1>TOP</h1>
+      </div>
       <div className="column-3 solid">
         <h2>SONGS</h2>
         <ol>
@@ -80,50 +82,74 @@ function App() {
           </li>
         </ol>
       </div>
-      <div className="column-3">
+      <div className="column-3 vertical">
         <h2>ARTISTS</h2>
-        <div className="artist">
-          <div className="profile-image"></div>
-          <div className="artist"></div>
-        </div>
-        <div className="artist">
-          <div className="profile-image"></div>
-          <div className="artist"></div>
-        </div>
-        <div className="artist">
-          <div className="profile-image"></div>
-          <div className="artist"></div>
-        </div>
-        <div className="artist">
-          <div className="profile-image"></div>
-          <div className="artist"></div>
-        </div>
-        <div className="artist">
-          <div className="profile-image"></div>
-          <div className="artist"></div>
-        </div>
-        <div className="artist">
-          <div className="profile-image"></div>
-          <div className="artist"></div>
-        </div>
-        <div className="artist">
-          <div className="profile-image"></div>
-          <div className="artist"></div>
-        </div>
-        <div className="artist">
-          <div className="profile-image"></div>
-          <div className="artist"></div>
-        </div>
-        <div className="artist">
-          <div className="profile-image"></div>
-          <div className="artist"></div>
-        </div>
-        <div className="artist">
-          <div className="profile-image"></div>
-          <div className="artist"></div>
-        </div>
+        <ol>
+          <li>
+            <div className="artist">
+              <img src="img/artist.jpg" alt="artist" />
+              <div></div>
+            </div>
+          </li>
+          <li>
+            <div className="artist">
+              <img src="img/artist.jpg" alt="artist" />
+              <div></div>
+            </div>
+          </li>
+          <li>
+            <div className="artist">
+              <img src="img/artist.jpg" alt="artist" />
+              <div></div>
+            </div>
+          </li>
+          <li>
+            <div className="artist">
+              <img src="img/artist.jpg" alt="artist" />
+              <div></div>
+            </div>
+          </li>
+          <li>
+            <div className="artist">
+              <img src="img/artist.jpg" alt="artist" />
+              <div></div>
+            </div>
+          </li>
+          <li>
+            <div className="artist">
+              <img src="img/artist.jpg" alt="artist" />
+              <div></div>
+            </div>
+          </li>
+          <li>
+            <div className="artist">
+              <img src="img/artist.jpg" alt="artist" />
+              <div></div>
+            </div>
+          </li>
+          <li>
+            <div className="artist">
+              <img src="img/artist.jpg" alt="artist" />
+              <div></div>
+            </div>
+          </li>
+          <li>
+            <div className="artist">
+              <img src="img/artist.jpg" alt="artist" />
+              <div></div>
+            </div>
+          </li>
+          <li>
+            <div className="artist">
+              <img src="img/artist.jpg" alt="artist" />
+              <div></div>
+            </div>
+          </li>
+        </ol>
       </div>
-      <div className="column-3 profile"></div>
+      <div className="column-3 profile">
+        <img src="img/profile.jpeg" alt="profile" />
+      </div>
     </div>
   );
 }
