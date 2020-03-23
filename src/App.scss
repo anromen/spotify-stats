@@ -1,0 +1,48 @@
+.App {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.column-3 {
+  width: 30%;
+  padding: 10px 50px 50px 50px;
+}
+
+.solid {
+  background-color: #1a0d2b;
+  border-radius: 50px;
+  opacity: 75%;
+
+  ol {
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.cover {
+  width: 30px;
+  float: left;
+  margin-right: 10px;
+}
+
+.song {
+  font-size: 0.7rem;
+}
+
+.first {
+  font-size: 1rem;
+
+  .cover {
+    width: 50px;
+  }
+}
