@@ -24,7 +24,7 @@ function ListedArtist(props) {
   return (
     <li>
       <div className="artist">
-        <img src="img/artist.jpg" alt="artist" />
+        <img src={props.item.images[2].url} alt="artist" />
         <div></div>
       </div>
     </li>
@@ -36,7 +36,7 @@ function OrderedList(props) {
     if (props.type === "tracks") {
       return <ListedSong key={item.name} item={item} />;
     }
-    return <ListedArtist key={item.name} />;
+    return <ListedArtist key={item.name} item={item} />;
   });
 
   return <ol>{items}</ol>;
@@ -48,7 +48,8 @@ class UserList extends Component {
     this.state = {
       token: props.token,
       tracks: [],
-      artists: []
+      artists: [],
+      user: { images: [{}] }
     };
   }
 
@@ -86,6 +87,23 @@ class UserList extends Component {
       .catch(function(err) {
         console.log("Fetch Error :-S", err);
       });
+
+    fetch("https://api.spotify.com/v1/me", {
+      method: "get",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + this.state.token
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ user: data });
+        console.log(data);
+      })
+      .catch(function(err) {
+        console.log("Fetch Error :-S", err);
+      });
   }
 
   render() {
@@ -103,7 +121,7 @@ class UserList extends Component {
           <OrderedList items={this.state.artists} type="artists" />
         </div>
         <div className="column-3 profile">
-          <img src="img/profile.jpeg" alt="profile" />
+          <img src={this.state.user.images[0].url} alt="profile" />
         </div>
       </React.Fragment>
     );
