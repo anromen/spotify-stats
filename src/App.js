@@ -1,157 +1,59 @@
-import React from "react";
+import React, { Component } from "react";
+import UserList from "./UserList";
 import "./App.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <div className="float">
-        <h1>TOP</h1>
+export const authEndpoint = "https://accounts.spotify.com/authorize";
+const clientId = "cb1ca7c082da480d81d06ac3ad20b3d5";
+const redirectUri = "http://localhost:3000";
+const scopes = ["user-read-private", "user-top-read"];
+
+const hash = window.location.hash
+  .substring(1)
+  .split("&")
+  .reduce(function(initial, item) {
+    if (item) {
+      var parts = item.split("=");
+      initial[parts[0]] = decodeURIComponent(parts[1]);
+    }
+    return initial;
+  }, {});
+
+window.location.hash = "";
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      token: null
+    };
+  }
+
+  componentDidMount() {
+    let _token = hash.access_token;
+    if (_token) {
+      this.setState({
+        token: _token
+      });
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        {!this.state.token && (
+          <a
+            className="btn btn--loginApp-link"
+            href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+              "%20"
+            )}&response_type=token&show_dialog=true`}
+          >
+            Login to Spotify
+          </a>
+        )}
+        {this.state.token && <UserList />}
       </div>
-      <div className="column-3 solid">
-        <h2>SONGS</h2>
-        <ol>
-          <li>
-            <div className="song first">
-              <img src="img/cover.jpg" alt="cover" className="cover" />
-              <h3>El mundo sigue girando</h3>
-              <small>Energía - El Chojin</small>
-            </div>
-          </li>
-          <li>
-            <div className="song">
-              <img src="img/cover.jpg" alt="cover" className="cover" />
-              <h3>El mundo sigue girando</h3>
-              <small>Energía - El Chojin</small>
-            </div>
-          </li>
-          <li>
-            <div className="song">
-              <img src="img/cover.jpg" alt="cover" className="cover" />
-              <h3>El mundo sigue girando</h3>
-              <small>Energía - El Chojin</small>
-            </div>
-          </li>
-          <li>
-            <div className="song">
-              <img src="img/cover.jpg" alt="cover" className="cover" />
-              <h3>El mundo sigue girando</h3>
-              <small>Energía - El Chojin</small>
-            </div>
-          </li>
-          <li>
-            <div className="song">
-              <img src="img/cover.jpg" alt="cover" className="cover" />
-              <h3>El mundo sigue girando</h3>
-              <small>Energía - El Chojin</small>
-            </div>
-          </li>
-          <li>
-            <div className="song">
-              <img src="img/cover.jpg" alt="cover" className="cover" />
-              <h3>El mundo sigue girando</h3>
-              <small>Energía - El Chojin</small>
-            </div>
-          </li>
-          <li>
-            <div className="song">
-              <img src="img/cover.jpg" alt="cover" className="cover" />
-              <h3>El mundo sigue girando</h3>
-              <small>Energía - El Chojin</small>
-            </div>
-          </li>
-          <li>
-            <div className="song">
-              <img src="img/cover.jpg" alt="cover" className="cover" />
-              <h3>El mundo sigue girando</h3>
-              <small>Energía - El Chojin</small>
-            </div>
-          </li>
-          <li>
-            <div className="song">
-              <img src="img/cover.jpg" alt="cover" className="cover" />
-              <h3>El mundo sigue girando</h3>
-              <small>Energía - El Chojin</small>
-            </div>
-          </li>
-          <li>
-            <div className="song">
-              <img src="img/cover.jpg" alt="cover" className="cover" />
-              <h3>El mundo sigue girando</h3>
-              <small>Energía - El Chojin</small>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div className="column-3 vertical">
-        <h2>ARTISTS</h2>
-        <ol>
-          <li>
-            <div className="artist">
-              <img src="img/artist.jpg" alt="artist" />
-              <div></div>
-            </div>
-          </li>
-          <li>
-            <div className="artist">
-              <img src="img/artist.jpg" alt="artist" />
-              <div></div>
-            </div>
-          </li>
-          <li>
-            <div className="artist">
-              <img src="img/artist.jpg" alt="artist" />
-              <div></div>
-            </div>
-          </li>
-          <li>
-            <div className="artist">
-              <img src="img/artist.jpg" alt="artist" />
-              <div></div>
-            </div>
-          </li>
-          <li>
-            <div className="artist">
-              <img src="img/artist.jpg" alt="artist" />
-              <div></div>
-            </div>
-          </li>
-          <li>
-            <div className="artist">
-              <img src="img/artist.jpg" alt="artist" />
-              <div></div>
-            </div>
-          </li>
-          <li>
-            <div className="artist">
-              <img src="img/artist.jpg" alt="artist" />
-              <div></div>
-            </div>
-          </li>
-          <li>
-            <div className="artist">
-              <img src="img/artist.jpg" alt="artist" />
-              <div></div>
-            </div>
-          </li>
-          <li>
-            <div className="artist">
-              <img src="img/artist.jpg" alt="artist" />
-              <div></div>
-            </div>
-          </li>
-          <li>
-            <div className="artist">
-              <img src="img/artist.jpg" alt="artist" />
-              <div></div>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div className="column-3 profile">
-        <img src="img/profile.jpeg" alt="profile" />
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
