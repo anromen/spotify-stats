@@ -50,7 +50,7 @@ class App extends Component {
             Login to Spotify
           </a>
         )}
-        {this.state.token && <UserList />}
+        {this.state.token && <UserList token={this.state.token} />}
       </div>
     );
   }
