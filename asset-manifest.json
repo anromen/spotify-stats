@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/spotfify-stats/static/css/main.bcf4aa63.chunk.css",
+    "main.js": "/spotfify-stats/static/js/main.4e87b984.chunk.js",
+    "main.js.map": "/spotfify-stats/static/js/main.4e87b984.chunk.js.map",
+    "runtime-main.js": "/spotfify-stats/static/js/runtime-main.901b44ab.js",
+    "runtime-main.js.map": "/spotfify-stats/static/js/runtime-main.901b44ab.js.map",
+    "static/js/2.5ebef059.chunk.js": "/spotfify-stats/static/js/2.5ebef059.chunk.js",
+    "static/js/2.5ebef059.chunk.js.map": "/spotfify-stats/static/js/2.5ebef059.chunk.js.map",
+    "index.html": "/spotfify-stats/index.html",
+    "precache-manifest.dcba2e4026848b491bacd86d731663f0.js": "/spotfify-stats/precache-manifest.dcba2e4026848b491bacd86d731663f0.js",
+    "service-worker.js": "/spotfify-stats/service-worker.js",
+    "static/css/main.bcf4aa63.chunk.css.map": "/spotfify-stats/static/css/main.bcf4aa63.chunk.css.map",
+    "static/js/2.5ebef059.chunk.js.LICENSE.txt": "/spotfify-stats/static/js/2.5ebef059.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.901b44ab.js",
+    "static/js/2.5ebef059.chunk.js",
+    "static/css/main.bcf4aa63.chunk.css",
+    "static/js/main.4e87b984.chunk.js"
+  ]
+}
