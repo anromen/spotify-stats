@@ -31,12 +31,13 @@
 
 .cover {
   width: 30px;
-  float: left;
   margin-right: 10px;
   border-radius: 10px;
 }
 
 .song {
+  display: flex;
+  justify-content: left;
   font-size: 0.7rem;
 }
 
@@ -83,6 +84,7 @@
     width: 75px;
     height: 75px;
     border-radius: 100px;
+    object-fit: cover;
   }
 }
 
@@ -112,4 +114,23 @@
     font-size: 15rem;
     line-height: 6rem;
   }
+}
+
+.empty {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-button {
+  background-color: white;
+  border-radius: 3vw;
+  height: 5vw;
+  width: 20vw;
+  padding: 2vw;
+  text-align: center;
+  color: rgb(50, 20, 94);
+  text-decoration: none;
 }

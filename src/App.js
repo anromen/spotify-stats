@@ -41,14 +41,16 @@ class App extends Component {
     return (
       <div className="App">
         {!this.state.token && (
-          <a
-            className="btn btn--loginApp-link"
-            href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-              "%20"
-            )}&response_type=token&show_dialog=true`}
-          >
-            Login to Spotify
-          </a>
+          <div className="empty">
+            <a
+              className="login-button"
+              href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+                "%20"
+              )}&response_type=token&show_dialog=true`}
+            >
+              <strong>Login to Spotify</strong>
+            </a>
+          </div>
         )}
         {this.state.token && <UserList token={this.state.token} />}
       </div>
