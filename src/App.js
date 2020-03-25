@@ -4,7 +4,7 @@ import "./App.scss";
 
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 const clientId = "cb1ca7c082da480d81d06ac3ad20b3d5";
-const redirectUri = "http://localhost:3000";
+const redirectUri = "https://anromen.github.io/spotify-stats";
 const scopes = ["user-read-private", "user-top-read"];
 
 const hash = window.location.hash
