@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/spotify-stats/static/css/main.bcf4aa63.chunk.css",
+    "main.css": "/spotify-stats/static/css/main.08f4e48c.chunk.css",
     "main.js": "/spotify-stats/static/js/main.36bf6a6a.chunk.js",
     "main.js.map": "/spotify-stats/static/js/main.36bf6a6a.chunk.js.map",
     "runtime-main.js": "/spotify-stats/static/js/runtime-main.a37374b3.js",
@@ -8,15 +8,15 @@
     "static/js/2.5ebef059.chunk.js": "/spotify-stats/static/js/2.5ebef059.chunk.js",
     "static/js/2.5ebef059.chunk.js.map": "/spotify-stats/static/js/2.5ebef059.chunk.js.map",
     "index.html": "/spotify-stats/index.html",
-    "precache-manifest.c272cfe4a96e2a30746ee79f92a0d57b.js": "/spotify-stats/precache-manifest.c272cfe4a96e2a30746ee79f92a0d57b.js",
+    "precache-manifest.20813f12b0676818fef6280a6f8239d0.js": "/spotify-stats/precache-manifest.20813f12b0676818fef6280a6f8239d0.js",
     "service-worker.js": "/spotify-stats/service-worker.js",
-    "static/css/main.bcf4aa63.chunk.css.map": "/spotify-stats/static/css/main.bcf4aa63.chunk.css.map",
+    "static/css/main.08f4e48c.chunk.css.map": "/spotify-stats/static/css/main.08f4e48c.chunk.css.map",
     "static/js/2.5ebef059.chunk.js.LICENSE.txt": "/spotify-stats/static/js/2.5ebef059.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a37374b3.js",
     "static/js/2.5ebef059.chunk.js",
-    "static/css/main.bcf4aa63.chunk.css",
+    "static/css/main.08f4e48c.chunk.css",
     "static/js/main.36bf6a6a.chunk.js"
   ]
 }
